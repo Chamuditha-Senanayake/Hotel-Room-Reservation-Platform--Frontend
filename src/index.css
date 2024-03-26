@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button.MuiButton-containedPrimary {
+    background-color: #00021E;
+    color: white;
+}
+
+button.MuiButton-containedPrimary:hover,
+button.MuiButton-containedPrimary:active {
+    background-color: #00021E;
+    /* Change background color on hover and click */
+}
+
+button.MuiButton-outlinedPrimary {
+    border-color: #00021E;
+    color: #00021E;
+}
+
+button.MuiButton-outlinedPrimary:hover,
+button.MuiButton-outlinedPrimary:active {
+    border-color: #00021E;
+    /* Change border color on hover and click */
+    color: #00021E;
+    /* Change text color on hover and click */
+}
