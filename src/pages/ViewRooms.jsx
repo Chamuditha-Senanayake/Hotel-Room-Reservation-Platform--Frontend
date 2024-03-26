@@ -17,6 +17,7 @@ const ViewRooms = () => {
     const [editCapacity, setEditCapacity] = useState('');
     const [editPrice, setEditPrice] = useState('');
     const [editAvailability, setEditAvailability] = useState('');
+    const [editImg, setEditImg] = useState('');
     const [createRoomModalOpen, setCreateRoomModalOpen] = useState(false);
     const [newRoomDetails, setNewRoomDetails] = useState({
         type: '',
@@ -25,6 +26,7 @@ const ViewRooms = () => {
         capacity: '',
         price: '',
         availability: '',
+        img: '',
     });
 
     useEffect(() => {
@@ -90,6 +92,7 @@ const ViewRooms = () => {
         setEditCapacity(room.capacity);
         setEditPrice(room.price);
         setEditAvailability(room.availability);
+        setEditImg(room.img);
     };
 
     const handleSaveEdit = async () => {
@@ -107,6 +110,7 @@ const ViewRooms = () => {
                     description: editDescription,
                     capacity: editCapacity,
                     price: editPrice,
+                    img: editImg,
                     availability: editAvailability
                 })
             });
@@ -136,6 +140,7 @@ const ViewRooms = () => {
             description: '',
             capacity: '',
             price: '',
+            img: '',
             availability: '',
         });
     };
@@ -280,6 +285,16 @@ const ViewRooms = () => {
                         value={editPrice}
                         onChange={(e) => setEditPrice(e.target.value)}
                     />
+                    <TextField
+                        margin="dense"
+                        id="img"
+                        name="img"
+                        label="Image URL"
+                        type="text"
+                        fullWidth
+                        value={editImg}
+                        onChange={(e) => setEditImg(e.target.value)}
+                    />
                     <FormControlLabel
                         control={
                             <Checkbox
@@ -361,6 +376,16 @@ const ViewRooms = () => {
                         type="text"
                         fullWidth
                         value={newRoomDetails.price}
+                        onChange={handleInputChange}
+                    />
+                    <TextField
+                        margin="dense"
+                        id="img"
+                        name="img"
+                        label="Image URL"
+                        type="text"
+                        fullWidth
+                        value={newRoomDetails.img}
                         onChange={handleInputChange}
                     />
                     <FormControlLabel

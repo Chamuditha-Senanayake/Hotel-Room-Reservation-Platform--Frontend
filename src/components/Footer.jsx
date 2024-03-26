@@ -23,7 +23,7 @@ const Footer = () => {
                             <Typography variant="h6" gutterBottom>Contact Us</Typography>
 
                             <Grid container spacing={1} alignItems="center" justifyContent="center">
-                                <Grid item style={{ paddingRight: '1rem' }}><MailOutline /></Grid>
+                                <Grid item style={{ paddingRight: '1rem', marginBottom: '0.4rem' }}><MailOutline /></Grid>
                                 <Typography variant="body2" >Email: info@hotellakeside.com</Typography>
                             </Grid>
                             <Grid container spacing={0.5} alignItems="center" justifyContent="center">
